@@ -28,3 +28,10 @@ phpexamples/Gearman/Client.php
 ```
 php examples/InMemory/Example.php
 ```
+
+### TODO
+
+* phpdocs
+* Console implementation
+* tests
+* documentation
