@@ -1,7 +1,14 @@
 <?php
 
-namespace Tasks;
+namespace Unit\Tasks;
 
+use Tasks\NamingFactory;
+use Tasks\TaskInterface;
+use Tasks\WorkerInterface;
+
+/**
+ * @group unit
+ */
 class NamingFactoryTest extends \PHPUnit_Framework_TestCase
 {
     public function testFromWorker()
