@@ -7,5 +7,12 @@
             "email": "johannes.wachter@massiveart.at"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0"
+    }
 }
