@@ -8,4 +8,8 @@ php:
   - nightly
 
 install:
+   - composer self-update
    - composer update
+
+script:
+   - phpunit -c phpunit.xml.dist
