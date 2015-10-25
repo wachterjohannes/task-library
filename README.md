@@ -1,5 +1,7 @@
 # task-library
 
+[![Build Status](https://travis-ci.org/wachterjohannes/task-library.svg?branch=master)](https://travis-ci.org/wachterjohannes/task-library)
+
 ## Install
 
 ### Gearman (Mac-OSX)
