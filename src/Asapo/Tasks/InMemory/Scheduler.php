@@ -8,11 +8,11 @@ use Tasks\TaskInterface;
 class Scheduler implements SchedulerInterface
 {
     /**
-     * @var WorkerManager
+     * @var TaskRunner
      */
     private $workerManager;
 
-    public function __construct(WorkerManager $workerManager)
+    public function __construct(TaskRunner $workerManager)
     {
         $this->workerManager = $workerManager;
     }

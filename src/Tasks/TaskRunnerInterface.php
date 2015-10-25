@@ -2,7 +2,7 @@
 
 namespace Tasks;
 
-interface WorkerManagerInterface
+interface TaskRunnerInterface
 {
     public function addWorker(WorkerInterface $worker);
 

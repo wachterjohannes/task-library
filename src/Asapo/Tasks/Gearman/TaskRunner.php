@@ -7,9 +7,9 @@ use GearmanWorker;
 use Tasks\NamingFactoryInterface;
 use Tasks\TaskInterface;
 use Tasks\WorkerInterface;
-use Tasks\WorkerManagerInterface;
+use Tasks\TaskRunnerInterface;
 
-class WorkerManager implements WorkerManagerInterface
+class TaskRunner implements TaskRunnerInterface
 {
     /**
      * @var string
