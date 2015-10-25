@@ -6,3 +6,6 @@
 vendor
 composer.phar
 composer.lock
+
+# read the docs
+/docs/build
