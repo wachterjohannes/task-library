@@ -1,0 +1,11 @@
+{
+    "name": "asapo/task-library",
+    "licence": "MIT",
+    "authors": [
+        {
+            "name": "Johannes Wachter",
+            "email": "johannes.wachter@massiveart.at"
+        }
+    ],
+    "require": {}
+}
