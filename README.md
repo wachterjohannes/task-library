@@ -33,7 +33,7 @@ php examples/InMemory/Example.php
 
 ### TODO
 
-* phpdocs
-* Console implementation
 * tests
+* priority
+* phpdocs
 * documentation
