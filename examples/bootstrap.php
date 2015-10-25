@@ -16,3 +16,5 @@ class Autoloader
 }
 
 spl_autoload_register('Autoloader::loader');
+
+include_once __DIR__ . "/ReverseWorker.php";
