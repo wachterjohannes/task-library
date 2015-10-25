@@ -3,7 +3,9 @@
 include_once __DIR__ . "/../bootstrap.php";
 
 $namingFactory = new \Tasks\NamingFactory();
-$workerManager = new \Asapo\Tasks\Gearman\TaskRunner($namingFactory);
+$gearmanWorker = new GearmanWorker();
+$gearmanWorker->addServer('127.0.0.1', 4730);
+$workerManager = new \Asapo\Tasks\Gearman\TaskRunner($gearmanWorker, $namingFactory);
 
 $workerManager->addWorker(new \ReverseWorker());
 $workerManager->run();

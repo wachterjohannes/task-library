@@ -10,16 +10,6 @@ use Tasks\TaskInterface;
 class Scheduler implements SchedulerInterface
 {
     /**
-     * @var string
-     */
-    private $host = '127.0.0.1';
-
-    /**
-     * @var int
-     */
-    private $port = 4730;
-
-    /**
      * @var NamingFactoryInterface
      */
     private $namingFactory;
@@ -29,14 +19,10 @@ class Scheduler implements SchedulerInterface
      */
     private $gearmanClient;
 
-    public function __construct(NamingFactoryInterface $namingFactory, $host = '127.0.0.1', $port = 4730)
+    public function __construct(GearmanClient $gearmanClient, NamingFactoryInterface $namingFactory)
     {
         $this->namingFactory = $namingFactory;
-        $this->host = $host;
-        $this->port = $port;
-
-        $this->gearmanClient = new GearmanClient();
-        $this->gearmanClient->addServer($this->host, $this->port);
+        $this->gearmanClient = $gearmanClient;
     }
 
     public function schedule(TaskInterface $task)

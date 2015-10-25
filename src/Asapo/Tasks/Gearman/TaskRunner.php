@@ -12,16 +12,6 @@ use Tasks\TaskRunnerInterface;
 class TaskRunner implements TaskRunnerInterface
 {
     /**
-     * @var string
-     */
-    private $host;
-
-    /**
-     * @var int
-     */
-    private $port;
-
-    /**
      * @var NamingFactoryInterface
      */
     private $namingFactory;
@@ -31,14 +21,10 @@ class TaskRunner implements TaskRunnerInterface
      */
     private $gearmanWorker;
 
-    public function __construct(NamingFactoryInterface $namingFactory, $host = '127.0.0.1', $port = 4730)
+    public function __construct(GearmanWorker $gearmanWorker, NamingFactoryInterface $namingFactory)
     {
         $this->namingFactory = $namingFactory;
-        $this->host = $host;
-        $this->port = $port;
-
-        $this->gearmanWorker = new GearmanWorker();
-        $this->gearmanWorker->addServer($this->host, $this->port);
+        $this->gearmanWorker = $gearmanWorker;
     }
 
     public function addWorker(WorkerInterface $worker)
