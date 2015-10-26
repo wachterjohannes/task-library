@@ -2,7 +2,7 @@
 
 namespace Asapo\Tasks\Database;
 
-use Tasks\TaskInterface;
+use Tasks\Scheduler\TaskInterface;
 
 interface TaskRepositoryInterface
 {

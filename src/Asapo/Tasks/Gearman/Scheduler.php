@@ -3,9 +3,9 @@
 namespace Asapo\Tasks\Gearman;
 
 use GearmanClient;
-use Tasks\NamingFactoryInterface;
-use Tasks\SchedulerInterface;
-use Tasks\TaskInterface;
+use Tasks\Naming\NamingFactoryInterface;
+use Tasks\Scheduler\SchedulerInterface;
+use Tasks\Scheduler\TaskInterface;
 
 class Scheduler implements SchedulerInterface
 {

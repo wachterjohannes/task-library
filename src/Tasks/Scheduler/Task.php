@@ -1,6 +1,6 @@
 <?php
 
-namespace Tasks;
+namespace Tasks\Scheduler;
 
 class Task implements TaskInterface
 {
@@ -20,11 +20,17 @@ class Task implements TaskInterface
         $this->workload = $workload;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getWorkerName()
     {
         return $this->workerName;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getWorkload()
     {
         return $this->workload;

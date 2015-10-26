@@ -1,6 +1,6 @@
 <?php
 
-namespace Tasks;
+namespace Tasks\TaskRunner;
 
 interface TaskRunnerInterface
 {

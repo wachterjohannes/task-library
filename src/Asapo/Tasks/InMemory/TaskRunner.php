@@ -2,10 +2,10 @@
 
 namespace Asapo\Tasks\InMemory;
 
-use Tasks\NamingFactoryInterface;
-use Tasks\TaskInterface;
-use Tasks\WorkerInterface;
-use Tasks\TaskRunnerInterface;
+use Tasks\Naming\NamingFactoryInterface;
+use Tasks\Scheduler\TaskInterface;
+use Tasks\TaskRunner\TaskRunnerInterface;
+use Tasks\TaskRunner\WorkerInterface;
 
 class TaskRunner implements TaskRunnerInterface
 {

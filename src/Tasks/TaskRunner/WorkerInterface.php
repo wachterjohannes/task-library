@@ -1,6 +1,8 @@
 <?php
 
-namespace Tasks;
+namespace Tasks\TaskRunner;
+
+use Tasks\Scheduler\TaskInterface;
 
 interface WorkerInterface
 {

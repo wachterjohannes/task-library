@@ -1,10 +1,9 @@
 <?php
 
 namespace Unit\Tasks;
-
-use Tasks\NamingFactory;
-use Tasks\TaskInterface;
-use Tasks\WorkerInterface;
+use Tasks\Naming\NamingFactory;
+use Tasks\Scheduler\TaskInterface;
+use Tasks\TaskRunner\WorkerInterface;
 
 /**
  * @group unit

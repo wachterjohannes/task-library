@@ -4,7 +4,7 @@ namespace Unit\InMemory;
 
 use Asapo\Tasks\InMemory\Scheduler;
 use Asapo\Tasks\InMemory\TaskRunner;
-use Tasks\TaskInterface;
+use Tasks\Scheduler\TaskInterface;
 
 /**
  * @group unit

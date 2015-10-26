@@ -2,10 +2,11 @@
 
 namespace Asapo\Tasks\Database;
 
-use Tasks\NamingFactoryInterface;
-use Tasks\TaskInterface;
-use Tasks\TaskRunnerInterface;
-use Tasks\WorkerInterface;
+
+use Tasks\Naming\NamingFactoryInterface;
+use Tasks\Scheduler\TaskInterface;
+use Tasks\TaskRunner\TaskRunnerInterface;
+use Tasks\TaskRunner\WorkerInterface;
 
 class TaskRunner implements TaskRunnerInterface
 {

@@ -2,8 +2,8 @@
 
 namespace Asapo\Tasks\Database;
 
-use Tasks\SchedulerInterface;
-use Tasks\TaskInterface;
+use Tasks\Scheduler\SchedulerInterface;
+use Tasks\Scheduler\TaskInterface;
 
 class Scheduler implements SchedulerInterface
 {

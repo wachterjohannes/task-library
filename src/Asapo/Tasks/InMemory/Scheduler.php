@@ -2,28 +2,28 @@
 
 namespace Asapo\Tasks\InMemory;
 
-use Tasks\SchedulerInterface;
-use Tasks\TaskInterface;
+use Tasks\Scheduler\SchedulerInterface;
+use Tasks\Scheduler\TaskInterface;
 
 class Scheduler implements SchedulerInterface
 {
     /**
      * @var TaskRunner
      */
-    private $workerManager;
+    private $taskRunner;
 
-    public function __construct(TaskRunner $workerManager)
+    public function __construct(TaskRunner $taskRunner)
     {
-        $this->workerManager = $workerManager;
+        $this->taskRunner = $taskRunner;
     }
 
     public function schedule(TaskInterface $task)
     {
-        $this->workerManager->addTask($task);
+        $this->taskRunner->addTask($task);
     }
 
     public function run(TaskInterface $task)
     {
-        return $this->workerManager->runImmediately($task);
+        return $this->taskRunner->runImmediately($task);
     }
 }

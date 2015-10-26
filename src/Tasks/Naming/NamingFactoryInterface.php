@@ -1,6 +1,9 @@
 <?php
 
-namespace Tasks;
+namespace Tasks\Naming;
+
+use Tasks\Scheduler\TaskInterface;
+use Tasks\TaskRunner\WorkerInterface;
 
 interface NamingFactoryInterface
 {

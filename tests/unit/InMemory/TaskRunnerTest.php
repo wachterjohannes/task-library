@@ -3,9 +3,9 @@
 namespace Unit\InMemory;
 
 use Asapo\Tasks\InMemory\TaskRunner;
-use Tasks\NamingFactory;
-use Tasks\TaskInterface;
-use Tasks\WorkerInterface;
+use Tasks\Naming\NamingFactory;
+use Tasks\Scheduler\TaskInterface;
+use Tasks\TaskRunner\WorkerInterface;
 
 class TaskRunnerTest extends \PHPUnit_Framework_TestCase
 {
