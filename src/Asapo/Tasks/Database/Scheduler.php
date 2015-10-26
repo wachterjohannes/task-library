@@ -4,6 +4,7 @@ namespace Asapo\Tasks\Database;
 
 use Tasks\Scheduler\SchedulerInterface;
 use Tasks\Scheduler\TaskInterface;
+use Tasks\TaskRunner\ImmediatelyTaskRunnerInterface;
 
 class Scheduler implements SchedulerInterface
 {
@@ -13,11 +14,11 @@ class Scheduler implements SchedulerInterface
     private $taskRepository;
 
     /**
-     * @var TaskRunner
+     * @var ImmediatelyTaskRunnerInterface
      */
     private $taskRunner;
 
-    public function __construct(TaskRepositoryInterface $taskRepository, TaskRunner $taskRunner)
+    public function __construct(TaskRepositoryInterface $taskRepository, ImmediatelyTaskRunnerInterface $taskRunner)
     {
         $this->taskRepository = $taskRepository;
         $this->taskRunner = $taskRunner;

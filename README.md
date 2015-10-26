@@ -34,6 +34,6 @@ php examples/InMemory/Example.php
 ### TODO
 
 * tests
-* priority
 * phpdocs
 * documentation
+* priority

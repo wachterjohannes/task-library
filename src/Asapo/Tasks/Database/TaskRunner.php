@@ -5,10 +5,10 @@ namespace Asapo\Tasks\Database;
 
 use Tasks\Naming\NamingFactoryInterface;
 use Tasks\Scheduler\TaskInterface;
-use Tasks\TaskRunner\TaskRunnerInterface;
+use Tasks\TaskRunner\ImmediatelyTaskRunnerInterface;
 use Tasks\TaskRunner\WorkerInterface;
 
-class TaskRunner implements TaskRunnerInterface
+class TaskRunner implements ImmediatelyTaskRunnerInterface
 {
     /**
      * @var NamingFactoryInterface
@@ -38,8 +38,10 @@ class TaskRunner implements TaskRunnerInterface
 
     public function run()
     {
-        foreach ($this->taskRepository->findAll() as $task) {
-            $this->worker[$this->namingFactory->fromTask($task)]->run($task);
+        $tasks = $this->taskRepository->findInCompleted();
+        foreach ($tasks as $task) {
+            $result = $this->worker[$this->namingFactory->fromTask($task)]->run($task);
+            $this->taskRepository->markCompleted($task, $result);
         }
     }
 
