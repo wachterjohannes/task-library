@@ -1,6 +1,6 @@
 <?php
 
-namespace Unit\Tasks;
+namespace Unit\Tasks\Naming;
 
 use Tasks\Naming\NamingFactory;
 use Tasks\Scheduler\TaskInterface;
